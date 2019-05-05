@@ -65,11 +65,40 @@ public class MyBlockingQueue {
         return syn;
     }
 
-    public PriorityBlockingQueue<Task> getPriorityBlockingQueue(){
-        PriorityBlockingQueue<Task>
+    /**
+     * 有优先级的消息队列
+     *
+     * @return
+     */
+    public PriorityBlockingQueue<TaskModel> getPriorityBlockingQueue() {
+        PriorityBlockingQueue<TaskModel> q = new PriorityBlockingQueue<TaskModel>();
+
+        TaskModel t1 = new TaskModel();
+        t1.setId(3);
+        t1.setName("任务1");
+
+        TaskModel t2 = new TaskModel();
+        t2.setId(6);
+        t2.setName("任务2");
+
+        TaskModel t3 = new TaskModel();
+        t3.setId(1);
+        t3.setName("任务3");
+
+        q.add(t1);
+        q.add(t2);
+        q.add(t3);
+
+        return q;
+
     }
 
-
+    public static void main(String[] args) {
+        MyBlockingQueue q = new MyBlockingQueue();
+        PriorityBlockingQueue<TaskModel> priority = q.getPriorityBlockingQueue();
+        System.out.println(priority);
+        //getPriorityBlockingQueue();
+    }
 
 
 }
