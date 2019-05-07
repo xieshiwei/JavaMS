@@ -1,9 +1,9 @@
-package ThreadMS;
+package Queue;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
- * @ClassName MyConcurrentLinkedQueue
+ * @ClassName 非阻塞队列
  * @Author 萌琪琪爸爸
  * @Description //TODO
  * @Date 2019/4/29 18:48

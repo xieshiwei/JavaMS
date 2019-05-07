@@ -1,6 +1,6 @@
-package ThreadMS;
+package Queue;
 
-import javafx.concurrent.Task;
+import ThreadMS.TaskModel;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -8,7 +8,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 
 /**
- * @ClassName MyBlockingQueue
+ * @ClassName 阻塞队列
  * @Author 萌琪琪爸爸
  * @Description //TODO
  * @Date 2019/4/29 18:50
@@ -90,7 +90,6 @@ public class MyBlockingQueue {
         q.add(t3);
 
         return q;
-
     }
 
     public static void main(String[] args) {
