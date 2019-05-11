@@ -17,11 +17,12 @@ public class MyConcurrentLinkedQueue {
         queue.offer("d");
         queue.offer("e");
 
-        //从头部去除元素，并从队列里删除
+        //从头部开始取一个元素，并从队列里删除
         System.out.println(queue.poll());
 
         System.out.println(queue.size());
+        //从头部开始取一个元素，不移除当前数据
         System.out.println(queue.peek());
-        System.out.println(queue.size());
+//        System.out.println(queue.size());
     }
 }
