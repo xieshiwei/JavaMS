@@ -1,4 +1,4 @@
-package ThreadMS;
+package thread;
 
 public class MyWaitNotify {
     public static void main(String[] args) {

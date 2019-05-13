@@ -1,6 +1,4 @@
-package Future;
-
-import java.util.concurrent.*;
+package future;
 
 //public class MyFuture implements Callable<String> {
 //    public static void main(String[] args) throws Exception {
@@ -11,8 +9,8 @@ import java.util.concurrent.*;
 ////        FutureTask<String> futureTask = new FutureTask<>(new MyFuture(query));
 ////
 ////        //创建一个固定的线程池，数量为1
-////        ExecutorService executorService = new Executors.newFixedThreadPool(1);
+////        ExecutorService executorService = new executors.newFixedThreadPool(1);
 ////
-////        Future future = executorService.submit(future);
+////        future future = executorService.submit(future);
 //    }
 //}

@@ -1,4 +1,4 @@
-package ThreadMS;
+package thread;
 
 /**
  * @ClassName MyInnerSingleton
@@ -20,7 +20,7 @@ public class MyInnerSingleton {
     }
 
     /**
-     * @return ThreadMS.MyInnerSingleton.Singletion
+     * @return thread.MyInnerSingleton.Singletion
      * @Author 萌琪琪爸爸
      * @Description //TODO
      * @Date 2019/4/29 16:27

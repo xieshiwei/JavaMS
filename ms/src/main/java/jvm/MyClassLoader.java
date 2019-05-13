@@ -1,4 +1,4 @@
-package JVMMS;
+package jvm;
 
 /**
  * 1.生成int类型变量a=0

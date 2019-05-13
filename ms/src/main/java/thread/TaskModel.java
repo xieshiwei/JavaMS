@@ -1,4 +1,4 @@
-package ThreadMS;
+package thread;
 
 public class TaskModel implements Comparable<TaskModel> {
 

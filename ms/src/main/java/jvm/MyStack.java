@@ -1,4 +1,4 @@
-package JVMMS;
+package jvm;
 
 public class MyStack {
 

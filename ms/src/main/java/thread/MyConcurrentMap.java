@@ -1,4 +1,4 @@
-package ThreadMS;
+package thread;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

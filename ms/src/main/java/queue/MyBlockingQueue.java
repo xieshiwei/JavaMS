@@ -1,6 +1,6 @@
-package Queue;
+package queue;
 
-import ThreadMS.TaskModel;
+import thread.TaskModel;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;

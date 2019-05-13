@@ -1,4 +1,4 @@
-package MasterWorker;
+package masterworker;
 
 public class Task {
 
