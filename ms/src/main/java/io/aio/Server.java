@@ -20,7 +20,7 @@ public class Server {
     private ExecutorService executorService;
 
     /**
-     * 线程组
+     * 线程组,用于接收多个Client的连接
      */
     private AsynchronousChannelGroup threadGroup;
 

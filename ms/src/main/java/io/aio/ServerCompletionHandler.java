@@ -30,7 +30,7 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
     /**
      * 读取数据
      *
-     * @param asc
+     * @param asc socket通道
      */
     private void read(final AsynchronousSocketChannel asc) {
         //读取数据
@@ -82,6 +82,6 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
      */
     @Override
     public void failed(Throwable exc, Server attachment) {
-
+        exc.printStackTrace();
     }
 }
