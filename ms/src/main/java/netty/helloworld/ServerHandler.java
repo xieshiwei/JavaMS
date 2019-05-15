@@ -1,10 +1,12 @@
-package netty;
+package netty.helloworld;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
-public class ClientHander extends ChannelHandlerAdapter {
+
+public class ServerHandler extends ChannelHandlerAdapter {
+
 
     /**
      * 异常时处理
@@ -30,7 +32,15 @@ public class ClientHander extends ChannelHandlerAdapter {
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        //丢弃接收到的数据
-        ((ByteBuf) msg).release();
+        //转换成ByteBuf
+        ByteBuf buf = (ByteBuf) msg;
+        //创建Byte数组
+        byte[] data = new byte[buf.readableBytes()];
+        //读取buf里的数据放到data数组中
+        buf.readBytes(data);
+        //data包装一下放入string，待输出
+        String request = new String(data, "utf-8");
+        System.out.println("Server: " + request);
     }
+
 }

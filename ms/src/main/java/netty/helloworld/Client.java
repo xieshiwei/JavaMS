@@ -1,11 +1,9 @@
-package netty;
+package netty.helloworld;
 
 import io.netty.bootstrap.Bootstrap;
-import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
@@ -33,8 +31,12 @@ public class Client {
 
         //绑定指定的端口进行监听
         ChannelFuture f = b.connect("127.0.0.1", 8765).sync();
-
-        f.channel().write(Unpooled.copiedBuffer("777".getBytes()));
+        //发送消息
+        Thread.sleep(1000);
+        f.channel().writeAndFlush(Unpooled.copiedBuffer("777".getBytes()));
+        f.channel().writeAndFlush(Unpooled.copiedBuffer("666".getBytes()));
+        Thread.sleep(2000);
+        f.channel().writeAndFlush(Unpooled.copiedBuffer("888".getBytes()));
         f.channel().flush();
         f.channel().closeFuture().sync();
         group.shutdownGracefully();
