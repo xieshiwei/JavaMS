@@ -1,4 +1,4 @@
-package rpc.staticproxy;
+package rpc.proxy.staticproxy;
 
 /**
  * 接口

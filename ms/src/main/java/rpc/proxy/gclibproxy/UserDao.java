@@ -1,4 +1,4 @@
-package rpc.gclibproxy;
+package rpc.proxy.gclibproxy;
 
 /**
  * 目标对象,没有实现任何接口

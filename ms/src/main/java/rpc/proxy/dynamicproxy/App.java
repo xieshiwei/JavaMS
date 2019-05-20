@@ -1,4 +1,4 @@
-package rpc.dynamicproxy;
+package rpc.proxy.dynamicproxy;
 
 /**
  * 创建动态代理对象

@@ -1,4 +1,4 @@
-package rpc.dynamicproxy;
+package rpc.proxy.dynamicproxy;
 
 /**
  * 接口

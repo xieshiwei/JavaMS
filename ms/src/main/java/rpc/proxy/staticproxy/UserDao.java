@@ -1,5 +1,4 @@
-package rpc.dynamicproxy;
-
+package rpc.proxy.staticproxy;
 
 /**
  * 接口实现

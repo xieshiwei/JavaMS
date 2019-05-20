@@ -1,4 +1,4 @@
-package rpc.gclibproxy;
+package rpc.proxy.gclibproxy;
 
 /**
  * Cglib代理,也叫作子类代理,它是在内存中构建一个子类对象从而实现对目标对象功能的扩展.
