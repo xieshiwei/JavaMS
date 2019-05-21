@@ -6,9 +6,8 @@ package rpc.mytest;
  * @Description //TODO
  * @Date 2019/5/20 17:04
  **/
-public class UserDao implements IUserDao {
+public class UserDao{
 
-    @Override
     public void save() {
         System.out.println("保存");
     }
