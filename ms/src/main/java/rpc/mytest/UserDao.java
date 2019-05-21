@@ -1,7 +1,7 @@
 package rpc.mytest;
 
 /**
- * @ClassName UserDao
+ * @ClassName UserDaoImpl
  * @Author 萌琪琪爸爸
  * @Description //TODO
  * @Date 2019/5/20 17:04

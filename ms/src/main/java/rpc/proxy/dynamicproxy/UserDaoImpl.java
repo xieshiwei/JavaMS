@@ -1,9 +1,10 @@
-package rpc.proxy.staticproxy;
+package rpc.proxy.dynamicproxy;
+
 
 /**
  * 接口实现
  */
-public class UserDao implements IUserDao {
+public class UserDaoImpl implements IUserDao {
 
     @Override
     public void save() {

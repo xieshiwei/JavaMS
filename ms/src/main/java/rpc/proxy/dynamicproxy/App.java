@@ -4,15 +4,17 @@ package rpc.proxy.dynamicproxy;
  * 创建动态代理对象
  * 动态代理不需要实现接口,但是需要指定接口类型
  * 代理对象不需要实现接口,但是目标对象一定要实现接口,否则不能用动态代理
+ * https://www.cnblogs.com/fengmingyue/p/6092151.html
+ *
  */
 public class App {
     public static void main(String[] args) {
         /**
          * 目标对象
          */
-        IUserDao target = new UserDao();
+        IUserDao target = new UserDaoImpl();
         /**
-         * 【原始的类型 class cn.itcast.b_dynamic.UserDao】
+         * 【原始的类型 class cn.itcast.b_dynamic.UserDaoImpl】
          */
         System.out.println(target.getClass());
 

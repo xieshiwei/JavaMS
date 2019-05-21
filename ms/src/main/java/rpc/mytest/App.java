@@ -8,8 +8,15 @@ package rpc.mytest;
  **/
 public class App {
     public static void main(String[] args) {
-        UserDao userDao = new UserDao();
-        UserDaoProxy userDaoProxy = new UserDaoProxy(userDao);
-        userDaoProxy.save();
+        //UserDaoImpl iUserDao = new UserDaoImpl();
+        //IUserDao proxy = (IUserDaoUserDao) new ProxyFactory(iUserDao).getProxyInstance();
+        //ProxyFactory proxy = new ProxyFactory(iUserDao);
+        //UserDaoImpl userDao = (UserDaoao) proxy.getProxyInstance();
+        //userDao.save();
+
+        IUserDao iUserDao = new UserDao();
+        ProxyFactory proxy = new ProxyFactory(iUserDao);
+        IUserDao result = (IUserDao) proxy.getProxyInstance();
+        result.save();
     }
 }

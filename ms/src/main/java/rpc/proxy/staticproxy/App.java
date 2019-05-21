@@ -5,8 +5,8 @@ package rpc.proxy.staticproxy;
  */
 public class App {
     public static void main(String[] args) {
-        UserDao userDao = new UserDao();
-        UserDaoProxy proxy = new UserDaoProxy(userDao);
+        UserDaoImpl userDaoImpl = new UserDaoImpl();
+        UserDaoProxy proxy = new UserDaoProxy(userDaoImpl);
         proxy.save();
     }
 }
