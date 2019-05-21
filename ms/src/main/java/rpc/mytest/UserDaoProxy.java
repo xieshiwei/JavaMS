@@ -9,15 +9,16 @@ package rpc.mytest;
 public class UserDaoProxy implements IUserDao {
     private IUserDao iUserDao;
 
-
     public UserDaoProxy(IUserDao iUserDao) {
         this.iUserDao = iUserDao;
     }
 
+
     @Override
     public void save() {
-        System.out.println("事务开始");
+
+        System.out.println("开始事物");
         this.iUserDao.save();
-        System.out.println("事务结束");
+        System.out.println("结束事物");
     }
 }

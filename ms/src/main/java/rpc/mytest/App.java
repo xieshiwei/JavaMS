@@ -9,10 +9,10 @@ package rpc.mytest;
 public class App {
     public static void main(String[] args) {
 
-        UserDao userDao = new UserDao();
-        ProxyFactory proxy = new ProxyFactory(userDao);
-        UserDao object = (UserDao) proxy.getProxyInstance();
-        object.save();
+        IUserDao iUserDao = new UserDaoImpl();
+
+        UserDaoProxy proxy = new UserDaoProxy(iUserDao);
+        proxy.save();
 
 
     }
