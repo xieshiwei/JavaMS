@@ -1,7 +1,7 @@
 package future;
 
 //public class MyFuture implements Callable<String> {
-//    public static void main(String[] args) throws Exception {
+//    public static void Main(String[] args) throws Exception {
 //
 ////        String query = "query";
 ////

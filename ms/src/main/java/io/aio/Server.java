@@ -61,7 +61,7 @@ public class Server {
     }
 
     /**
-     * main
+     * Main
      * @param args
      */
     public static void main(String[] args) {
