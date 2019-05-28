@@ -1,8 +1,8 @@
-package collection;
+package collection.iteratortest;
 
 import java.util.*;
 
-public class iteratortest {
+public class iterator {
 
     /**
      * 测试删除元素在迭代器和集合中的区别

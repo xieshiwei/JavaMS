@@ -1,4 +1,4 @@
-package collection;
+package collection.treemaptest;
 
 import java.util.Comparator;
 import java.util.Iterator;
@@ -6,15 +6,16 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * @ClassName treemap
+ * @ClassName SortDemo
  * @Author 萌琪琪爸爸
  * @Description //TODO
  * @Date 2019/5/27 16:25
  **/
-public class treemap {
+public class SortDemo {
 
     /**
      * 入口
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -34,7 +35,7 @@ public class treemap {
     }
 
     /**
-     * 自定义排序
+     * 自定义排序，需要实现Compartor接口重现compareTo方法
      */
     private static void createDefinitionSortTreeMap() {
         TreeMap<String, String> treeMap = new TreeMap<>(new Comparator<String>() {
