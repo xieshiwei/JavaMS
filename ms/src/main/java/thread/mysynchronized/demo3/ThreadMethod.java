@@ -1,4 +1,4 @@
-package thread.mysynchronized.Demo3;
+package thread.mysynchronized.demo3;
 
 /**
  * @ClassName ThreadMethod

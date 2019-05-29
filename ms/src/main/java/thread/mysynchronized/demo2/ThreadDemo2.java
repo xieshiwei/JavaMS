@@ -1,4 +1,4 @@
-package thread.mysynchronized.Demo2;
+package thread.mysynchronized.demo2;
 
 /**
  * @ClassName ThreadDemo1
@@ -40,7 +40,7 @@ public class ThreadDemo2 {
      * 输出
      */
     public static void print() {
-        System.out.println("=================Demo2=================");
+        System.out.println("=================demo2=================");
         ThreadDemo2 d1 = new ThreadDemo2();
         ThreadDemo2 d2 = new ThreadDemo2();
 

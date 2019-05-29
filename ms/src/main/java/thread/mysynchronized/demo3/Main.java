@@ -1,16 +1,16 @@
-package thread.mysynchronized.Demo2;
+package thread.mysynchronized.demo3;
 
 /**
  * @ClassName Main
  * @Author 萌琪琪爸爸
  * @Description //TODO
- * @Date 2019/5/29 1:35
+ * @Date 2019/5/29 1:36
  **/
 public class Main {
     public static void main(String[] args) {
         /**
-         * 测试对象锁
+         * 同步，异步锁
          */
-        ThreadDemo2.print();
+        ThreadDemo3.print();
     }
 }

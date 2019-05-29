@@ -1,4 +1,4 @@
-package thread.mysynchronized.Demo2;
+package thread.mysynchronized.demo2;
 
 /**
  * @ClassName MultiThread

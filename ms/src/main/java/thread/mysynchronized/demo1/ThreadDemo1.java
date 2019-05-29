@@ -1,4 +1,4 @@
-package thread.mysynchronized.Demo1;
+package thread.mysynchronized.demo1;
 
 /**
  * @ClassName ThreadDemo1
@@ -28,7 +28,7 @@ public class ThreadDemo1 extends Thread {
      * 3 如果拿不到锁，线程不断尝试获得这把锁，直到拿到为止
      */
     public static void print() {
-        System.out.println("=================Demo1=================");
+        System.out.println("=================demo1=================");
         ThreadDemo1 thread = new ThreadDemo1();
         Thread t1 = new Thread(thread, "t1");
         Thread t2 = new Thread(thread, "t2");

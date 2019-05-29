@@ -1,4 +1,4 @@
-package thread.mysynchronized.Demo1;
+package thread.mysynchronized.demo1;
 
 /**
  * @ClassName Main
