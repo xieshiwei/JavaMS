@@ -19,7 +19,11 @@ public class NoInitialization {
          * 以后NotInitalization对常量ConstClass的引用被转化为NotInitalization类对自身常量池的引用
          * 没有ConstClass类的符号引用入口
          */
-        System.out.println(CostClass.HELLOWORLD);
+        //System.out.println(CostClass.HELLOWORLD);
+
+
+        int a;
+        System.out.println(a);
 
     }
 }
