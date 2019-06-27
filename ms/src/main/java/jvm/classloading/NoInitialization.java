@@ -22,8 +22,5 @@ public class NoInitialization {
         //System.out.println(CostClass.HELLOWORLD);
 
 
-        int a;
-        System.out.println(a);
-
     }
 }
