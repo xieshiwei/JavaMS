@@ -44,8 +44,9 @@ public class BinarySearch {
      */
     public static int commonBinarySearch(int[] arr, int key) {
         int low = 0;
-        int high = arr.length - 1;
-        int middle = 0;            //定义middle
+        int high = arr.length - 1;as
+        //定义middle
+        int middle = 0;
 
         if (key < arr[low] || key > arr[high] || low > high) {
             return -1;
