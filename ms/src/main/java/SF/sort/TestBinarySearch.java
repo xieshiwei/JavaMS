@@ -16,19 +16,15 @@ public class TestBinarySearch {
      * @return
      */
     public static int commonBinarySearch(int[] arr, int key) {
-        //最小位置
+
         int low = 0;
-        //最大长度
         int high = arr.length - 1;
-        //中间数
         int middle = 0;
 
-        if (key < arr[low] || key > arr[high] || low > high) {
+        if (arr == null || arr.length <= 0) {
             return -1;
         }
-
         while (low <= high) {
-            //二叉树中间值
             middle = (low + high) / 2;
             if (arr[middle] > key) {
                 high = middle - 1;
@@ -38,7 +34,13 @@ public class TestBinarySearch {
                 return middle;
             }
         }
+        return -1;
     }
 
+    public static void main(String[] args) {
 
+        int[] arr = {1, 3, 5, 7, 9};
+        System.out.println(commonBinarySearch(arr, 9));
+
+    }
 }

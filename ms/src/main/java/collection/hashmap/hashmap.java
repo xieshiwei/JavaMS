@@ -2,6 +2,7 @@ package collection.hashmap;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @ClassName hashmap
@@ -13,6 +14,8 @@ public class hashmap {
 
 
     public static void main(String[] args) {
+
+
         //book的HashCode和HashCode二进制
         String name = "book";
         System.out.println("book的HashCode：" + name.hashCode());
@@ -29,7 +32,7 @@ public class hashmap {
         System.out.println("book在HashMap中的二进制下标：" + hashMapBinaryCount);
         //System.out.println("book在HashMap中的十进制下标：" + index);
 
-        ArrayList<String> list=new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
 
     }
 
