@@ -8,27 +8,24 @@ package SF.sort;
  **/
 public class TestBinarySearch {
 
-    /**
-     * 循环二叉树
-     *
-     * @param arr 数字数组
-     * @param key 要查询的数字
-     * @return
-     */
-    public static int commonBinarySearch(int[] arr, int key) {
+    public static int getBinarySearchResult(int[] arr, int num) {
 
         int low = 0;
-        int high = arr.length - 1;
+        int high = 0;
         int middle = 0;
 
         if (arr == null || arr.length <= 0) {
             return -1;
         }
+
+        high = arr.length - 1;
+
         while (low <= high) {
+
             middle = (low + high) / 2;
-            if (arr[middle] > key) {
+            if (arr[middle] > num) {
                 high = middle - 1;
-            } else if (arr[middle] < key) {
+            } else if (arr[middle] < num) {
                 low = middle + 1;
             } else {
                 return middle;
@@ -38,9 +35,9 @@ public class TestBinarySearch {
     }
 
     public static void main(String[] args) {
-
         int[] arr = {1, 3, 5, 7, 9};
-        System.out.println(commonBinarySearch(arr, 9));
-
+        System.out.println("下标：" + getBinarySearchResult(arr, 9));
     }
+
+
 }
