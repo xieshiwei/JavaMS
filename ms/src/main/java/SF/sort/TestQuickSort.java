@@ -4,35 +4,24 @@ import java.util.Arrays;
 
 public class TestQuickSort {
 
-    /**
-     * 定义一个基准数
-     * 从右向左循环排序
-     * 从左向右循环排序
-     *
-     * @param low
-     * @param high
-     * @param arr
-     */
-    public static void quickSort(int low, int high, int[] arr) {
-        if (arr != null && arr.length > 0 && low < high) {
-            //获取基准数
-            int index = getIndex(low, high, arr);
-            //从左往右
-            quickSort(low, index - 1, arr);
-            //从右往左
-            quickSort(index + 1, high, arr);
+    public static void quitSort(int low, int high, int[] arr) {
+        if (low < high) {
+            int temp = getBasicNum(low, high, arr);
+            quitSort(low, temp - 1, arr);
+            quitSort(temp + 1, high, arr);
         }
     }
 
+
     /**
-     * 获取基准数下标
+     * 获取基准值
      *
      * @param low
      * @param high
      * @param arr
      * @return
      */
-    public static int getIndex(int low, int high, int[] arr) {
+    public static int getBasicNum(int low, int high, int[] arr) {
         if (arr == null || arr.length <= 0) {
             return -1;
         }
@@ -42,6 +31,7 @@ public class TestQuickSort {
                 high--;
             }
             arr[low] = arr[high];
+
             while (low < high && temp >= arr[low]) {
                 low++;
             }
@@ -52,10 +42,9 @@ public class TestQuickSort {
     }
 
     public static void main(String[] args) {
-        int[] nums = {49, 38, 65, 97, 23, 22, 76, 1, 5, 8, 2, 0, -1, 22};
-        System.out.println(Arrays.toString(nums));
-        quickSort(0, nums.length - 1, nums);
-        System.out.println(Arrays.toString(nums));
+        int[] arr = {6, 3, 67, 0, 8, 18, 97, -2, 1};
+        quitSort(0, arr.length - 1, arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 
