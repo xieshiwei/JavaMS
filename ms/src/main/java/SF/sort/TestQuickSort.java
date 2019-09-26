@@ -4,36 +4,35 @@ import java.util.Arrays;
 
 public class TestQuickSort {
 
-    public static void quitSort(int low, int high, int[] arr) {
-        if (arr != null && arr.length > 0 && low < high) {
-            int index = getNum(low, high, arr);
-            quitSort(low, index - 1, arr);
-            quitSort(index + 1, high, arr);
-        }
-    }
-
-    public static int getNum(int low, int high, int[] arr) {
-        if (arr == null || arr.length <= 0) {
-            return -1;
-        }
-        int temp = arr[low];
+    public static int getIndex(int low, int high, int[] arr) {
+        int index = arr[low];
         while (low < high) {
-            while (low < high && temp <= arr[high]) {
+            while (low < high && index <= arr[high]) {
                 high--;
             }
             arr[low] = arr[high];
-            while (low < high && temp >= arr[low]) {
+
+            while (low < high && index >= arr[low]) {
                 low++;
             }
             arr[high] = arr[low];
         }
-        arr[low] = temp;
+        arr[low] = index;
         return low;
     }
 
+    public static void quickSort(int low, int high, int[] arr) {
+        if (arr != null && arr.length > 0 && low < high) {
+            int index = getIndex(low, high, arr);
+            quickSort(low, index - 1, arr);
+            quickSort(index + 1, high, arr);
+        }
+    }
+
     public static void main(String[] args) {
-        int[] arr = {3, 5, 1, 0, 99, 82, 33, 25};
-        quitSort(0, arr.length - 1, arr);
+        int[] arr = {3, 1, -2, 100, 86, 99, 34, 45};
+        quickSort(0, arr.length - 1, arr);
         System.out.println(Arrays.toString(arr));
     }
+
 }
