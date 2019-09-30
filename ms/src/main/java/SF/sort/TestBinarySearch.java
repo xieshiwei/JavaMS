@@ -8,18 +8,19 @@ package SF.sort;
  **/
 public class TestBinarySearch {
 
-    public static int getIndex(int[] arr, int num) {
+    public static int getIndex(int[] arr, int index) {
         if (arr == null || arr.length <= 0) {
             return -1;
         }
         int low = 0;
         int high = arr.length - 1;
         int middle = 0;
+
         while (low <= high) {
             middle = (low + high) / 2;
-            if (arr[middle] > num) {
+            if (arr[middle] > index) {
                 high = middle - 1;
-            } else if (arr[middle] < num) {
+            } else if (arr[middle] < index) {
                 low = middle + 1;
             } else {
                 return middle;
@@ -29,9 +30,10 @@ public class TestBinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 7, 9};
-        int num = 0;
-        System.out.println(getIndex(arr, num));
+        int[] arr = {1, 5, 6, 7, 9};
+        int index = 9;
+        System.out.println(getIndex(arr, index));
     }
+
 
 }
