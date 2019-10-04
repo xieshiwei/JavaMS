@@ -1,24 +1,15 @@
 package SF.sort;
 
+
 import java.util.Arrays;
 
-
 /**
- * 1.找一个基准值
- * 2.从高到底扫描比较，互换位置
- * 3.从低到高扫描比较，互换位置
- * 4.用递归分别对基准值左右两边的数组重新排列顺序
+ * 1.找基准值
+ * 2.从左右两边扫描，如果不符合条件交换位置，左边最大，右边最小
+ * 3.第一个排序结束后，将基准值左右两边的重新用想通的方法重新排序
  */
 public class TestQuickSort {
 
-
-    /**
-     * 快排
-     *
-     * @param low
-     * @param high
-     * @param arr
-     */
     public static void quickSort(int low, int high, int[] arr) {
         if (low < high) {
             int index = getIndex(low, high, arr);
@@ -27,23 +18,14 @@ public class TestQuickSort {
         }
     }
 
-    /**
-     * 返回基准值
-     *
-     * @param low
-     * @param high
-     * @param arr
-     * @return
-     */
-    public static int getIndex(int low, int high, int[] arr) {
-        //基准值
+    private static int getIndex(int low, int high, int[] arr) {
         int index = arr[low];
         while (low < high) {
-            while (low < high && index <= arr[high]) {
+            while (low < high && arr[high] >= index) {
                 high--;
             }
             arr[low] = arr[high];
-            while (low < high && index >= arr[low]) {
+            while (low < high && arr[low] <= index) {
                 low++;
             }
             arr[high] = arr[low];
@@ -53,10 +35,10 @@ public class TestQuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3, 5, 4, 23, 1, 78, 12, 1, 56, -1, 0, 3};
+        int[] arr = {3, 1, 5, 9, 77, 54, 2, 44, 0, -1, 22};
         quickSort(0, arr.length - 1, arr);
         System.out.println(Arrays.toString(arr));
-
     }
+
 
 }

@@ -3,6 +3,8 @@ package SF.sort;
 
 /**
  * 二分查找法
+ * 注意点：
+ * 1.whil中的判断必须是low<=high，如果写成low < high最后一只值取不到下标
  */
 public class BinarySearch {
 

@@ -14,26 +14,23 @@ public class TestBinarySearch {
         }
         int low = 0;
         int high = arr.length - 1;
-        int middle = 0;
-
+        int middel = 0;
         while (low <= high) {
-            middle = (low + high) / 2;
-            if (arr[middle] > index) {
-                high = middle - 1;
-            } else if (arr[middle] < index) {
-                low = middle + 1;
+            middel = (low + high) / 2;
+            if (arr[middel] > index) {
+                high = middel - 1;
+            } else if (arr[middel] < index) {
+                low = middel + 1;
             } else {
-                return middle;
+                return middel;
             }
         }
         return -1;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 5, 6, 7, 9};
-        int index = 9;
-        System.out.println(getIndex(arr, index));
+        int[] arr = {1, 3, 5, 6, 9};
+        System.out.println(getIndex(arr, 9));
     }
-
 
 }

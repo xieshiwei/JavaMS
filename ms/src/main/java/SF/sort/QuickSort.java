@@ -66,6 +66,7 @@ public class QuickSort {
      * 1.最大值循环的时候，循环完后要把high的值赋值给low的位置
      * 2.最小值循环的时候，循环完后要把low的值赋值给high的位置
      * 3.两个while中的大小判断不要写错
+     * 4.从大到小扫描结束后要写arr[low]=arr[high]，容易些反
      *
      * @param nums
      * @param low
