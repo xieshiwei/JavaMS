@@ -8,29 +8,36 @@ package SF.sort;
  **/
 public class TestBinarySearch {
 
+    /**
+     * 下标
+     *
+     * @param arr
+     * @param index
+     * @return
+     */
     public static int getIndex(int[] arr, int index) {
         if (arr == null || arr.length <= 0) {
             return -1;
         }
         int low = 0;
         int high = arr.length - 1;
-        int middel = 0;
+        int middle = 0;
         while (low <= high) {
-            middel = (low + high) / 2;
-            if (arr[middel] > index) {
-                high = middel - 1;
-            } else if (arr[middel] < index) {
-                low = middel + 1;
+            middle = (low + high) / 2;
+            if (arr[middle] > index) {
+                high = middle - 1;
+            } else if (arr[middle] < index) {
+                low = middle + 1;
             } else {
-                return middel;
+                return middle;
             }
         }
         return -1;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 6, 9};
-        System.out.println(getIndex(arr, 9));
+        int[] arr = {1, 3, 5, 7, 9};
+        System.out.println(getIndex(arr, 1));
     }
 
 }
