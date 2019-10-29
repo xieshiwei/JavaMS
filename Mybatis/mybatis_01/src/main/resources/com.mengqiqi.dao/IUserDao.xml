@@ -5,7 +5,9 @@
     <!--配置查询所有-->
 
     <!--id必须与接口方法的名称一致-->
-    <select id="findAll">
+    <!--配置查询所有信息，有了他就有了执行的SQL查询语句，就可以获取PreparedStatement。
+    此配置中还有封装的实体类全限定类名-->
+    <select id="findAll" resultType="com.mengqiqi.entitis.User">
         select * from user
     </select>
 

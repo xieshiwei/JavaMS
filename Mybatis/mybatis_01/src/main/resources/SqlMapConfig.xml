@@ -12,8 +12,8 @@
             <transactionManager type="JDBC"></transactionManager>
             <!--配置数据源（连接池） type有3个 -->
             <dataSource type="POOLED">
-            <!--配置数据库连接的四个基本类型-->
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
+            <!--配置数据库连接的四个基本类型，链接数据库的信息，有了他们就可以创建Connection对象-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://localhost:3306/clouddb01"/>
                 <property name="username" value="root"/>
                 <property name="password" value="1234"/>
@@ -24,7 +24,8 @@
 
     <!--映射配置文件的位置，银蛇配置文件指的是每个dao独立的配置文件-->
     <mappers>
-        <mapper resource="com/mengqiqi/dao/IUserDao.xml"></mapper>
+        <!--有了他就有了映射配置信息-->
+        <mapper resource="com.mengqiqi.dao/IUserDao.xml"></mapper>
     </mappers>
 
 </configuration>
