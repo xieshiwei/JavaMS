@@ -41,6 +41,7 @@ public class EqualTest {
     }
 
     /**
+     *
      * String类中的equals首先比较地址，如果是同一个对象的引用，可知对象相等，返回true。
      * 若果不是同一个对象，equals方法挨个比较两个字符串对象内的字符，只有完全相等才返回true，否则返回false。
      */
@@ -49,8 +50,10 @@ public class EqualTest {
         String s1 = "nihao";
         String s2 = "nihao";
         String s3 = new String("nihao");
+        String s4 = new String("nihao");
         System.out.println(s1.equals(s2));
         System.out.println(s1.equals(s3));
+        System.out.println(s3 == s4);
     }
 
     /**
