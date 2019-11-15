@@ -8,7 +8,7 @@ import rpc.rpchelloworld.HelloService;
  * @Description //TODO
  * @Date 8/4/2019 12:13 AM
  **/
-public class easy02 {
+public class ToggleCase {
 
     /**
      * 问题：
