@@ -6,6 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @ClassName MyConcurrentMap
  * @Author 萌琪琪爸爸
+ * 想通key的时候不会添加进来
  * @Description //ConcurrentHashMap
  * @Date 2019/4/29 16:51
  **/
