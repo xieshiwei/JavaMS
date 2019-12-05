@@ -13,5 +13,8 @@ public class TestArrayList {
 
         ArrayList a2 = (ArrayList) arrayList.clone();
 
+
+        arrayList.remove(1)
+
     }
 }
