@@ -13,7 +13,7 @@ import java.util.InputMismatchException;
  * @Description //TODO
  * @Date 2019/12/14 11:30
  **/
-public class NIOFileChannel {
+public class NIOFileChannelWrite {
 
     /**
      * 判断当前路径是否存在，如果不存在就创建一个文件
@@ -36,10 +36,10 @@ public class NIOFileChannel {
     public static void testFileChannel() throws Exception {
         String str = "hello";
         //判断当前路径是否存在
-        checkFilePath("./test.txt");
+        //checkFilePath("./test.txt");
 
         //创建一个输出流
-        FileOutputStream fileOutputStream = new FileOutputStream("D:\\Game");
+        FileOutputStream fileOutputStream = new FileOutputStream("D:\\GitHub\\JavaMS\\Netty\\test.txt");
 
         //通过fileoutputstream获取对应的filechannel
         //这个filechannel真实类型是filechannelImp
@@ -56,6 +56,9 @@ public class NIOFileChannel {
 
         //将bytebuffer数据写入到filechannel
         fileChannel.write(byteBuffer);
+
+        //关闭通道
+        fileChannel.close();
 
         //关闭流
         fileOutputStream.close();
