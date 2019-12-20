@@ -21,6 +21,12 @@ public class NettyServer {
     public static void main(String[] args) throws Exception {
 
 
+        /**
+         * NioEventLoopGroup，包含子线程的个数
+         * 默认是当前CPU核数*2，例如4核CPU NioEventLoopGroup默认会开启8个线程
+         * 源码：NettyRuntime.availableProcessors() * 2
+         */
+
         //处理链接请求的线程
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         //业务处理的线程
