@@ -8,6 +8,11 @@ import io.netty.util.CharsetUtil;
 
 /**
  * @ClassName NettyClientHandler
+ *
+ * 1 继承 ChannelInboundHandlerAdapter 入站适配器对象
+ * 2 重写 channelActive 在Channel注册EventLoop、绑定SocketAddress和连接ChannelFuture的时候触发
+ * 3 重写 channelRead 监听到读操作时触发
+ * 4 重写 exceptionCaught 异常时触发
  * @Author 萌琪琪爸爸
  * @Description //TODO
  * @Date 2019/12/19 19:30
@@ -15,14 +20,17 @@ import io.netty.util.CharsetUtil;
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
     /**
-     * 当通道就绪就会触发该方法
+     * 在Channel注册EventLoop、绑定SocketAddress和连接ChannelFuture的时候
+     * 都有可能会触发ChannelInboundHandler的channelActive方法的调用。
+     * 当通道就绪就会触发该方法。
      *
-     * @param ctx
+     * @param ctx 上下文对象，含有管道pipeline，通道channel，地址
      * @throws Exception
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         System.out.println("client" + ctx);
+        //将数据写入到ChannelPipeline中
         ctx.writeAndFlush(Unpooled.copiedBuffer("hello,server:喵喵", CharsetUtil.UTF_8));
     }
 
