@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--把对象的创建交给spring来管理-->
+    <!--创建对象的三种方式
+    第一种方式：使用默认构造函数创建，在spring配置文件中使用bean标签，
+        配置id class属性之后，且没有其他属性和标签的时候。
+        采用的就是默认构造函数创建bean对象，
+        此时如果类中没有默认构造函数，创建无法创建-->
+    <bean id="accountService" class="com.spring.service.impl.AccountServiceImpl"></bean>
+
+    <!--第二种方式：使用普通工程中的方法创建对象（使用某个类中的方法创建对象，并存入spring容器中）-->
+    <bean id="accountDao" class="com.spring.dao.impl.AccountDaoImpl"></bean>
+    <bean id="accountService" factory-bean="accountDao" factory-method="saveAccount"></bean>
+
+    <!-- 第三种方式：使用工厂中的静态方法创建对象（使用某个类中的静态方法创建对象，并存入spring容器） -->
+
+    <!-- bean的作用范围 -->
+
+</beans>
