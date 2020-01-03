@@ -30,6 +30,53 @@ public class testEasy {
      * 输入: 'b'
      * 输出: 'B'
      **/
+    public static void main(String[] args) {
+        String word = "abcABC";
+        System.out.println(toggleCase1(word));
+        System.out.println(toggleCase2(word));
+    }
+
+    public static String toggleCase1(String words) {
+        if (words == null || "".equals(words)) {
+            return words;
+        } else {
+            char[] chars = words.toCharArray();
+            for (int i = 0; i < chars.length; i++) {
+                if (chars[i] >= 'a' && chars[i] <= 'z') {
+                    //小写字母判断
+                    chars[i] -= 32;
+                } else if (chars[i] >= 'A' && chars[i] <= 'Z') {
+                    //大写字母判断
+                    chars[i] += 32;
+                }
+            }
+            return new String(chars);
+        }
+    }
+
+    public static String toggleCase2(String words) {
+        if (words == null || "".equals(words)) {
+            return words;
+        } else {
+            char[] chars = words.toCharArray();
+            for (char aChar : chars) {
+                if (aChar >= 'a' && aChar <= 'z') {
+                    //小写字母判断
+                    System.out.println(aChar);
+                    aChar -= 32;
+                    System.out.println(aChar);
+                } else if (aChar >= 'A' && aChar <= 'Z') {
+                    //大写字母判断
+                    System.out.println(aChar);
+                    aChar += 32;
+                    System.out.println(aChar);
+                }
+            }
+            return new String(chars);
+        }
+
+    }
 
 
 }
+

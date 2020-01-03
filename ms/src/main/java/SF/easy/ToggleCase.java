@@ -31,6 +31,11 @@ public class ToggleCase {
      * 4 小写ASCII-32（ASCII 97~122）
      * 5 大写ASCII+32（ASCII 65~90）
      * 6 将转换好的char数组作为参数创建个String对象输出
+     *
+     * 注意：
+     * 如果要修改char数组的值，必须要用for循环，不能使用foreach
+     * 在用foreach循环遍历一个集合时，不能改变集合中的元素
+     *
      * @param word
      */
     public static String toggleCase(String words) {

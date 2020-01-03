@@ -8,13 +8,6 @@ public class TestArrayList {
 
     public static void main(String[] args) {
 
-        ArrayList arrayList = new ArrayList();
-        arrayList.add("aaaa");
-
-        ArrayList a2 = (ArrayList) arrayList.clone();
-
-
-        arrayList.remove(1)
 
     }
 }
