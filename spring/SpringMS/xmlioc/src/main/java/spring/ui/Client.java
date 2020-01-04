@@ -1,7 +1,7 @@
 package spring.ui;
 
-import com.spring.service.IAccountService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import spring.service.IAccountService;
 
 /**
  * @ClassName Client

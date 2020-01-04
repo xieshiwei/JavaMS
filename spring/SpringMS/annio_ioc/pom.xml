@@ -9,10 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>anno_ioc</artifactId>
-
+    <artifactId>annio_ioc</artifactId>
     <packaging>jar</packaging>
 
-    
 
 </project>

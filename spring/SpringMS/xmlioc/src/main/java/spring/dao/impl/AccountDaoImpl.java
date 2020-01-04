@@ -26,6 +26,7 @@ public class AccountDaoImpl implements IAccountDao {
         this.runner = runner;
     }
 
+    @Override
     public List<Account> finalAllAccount() {
         try {
             return runner.query("select * from account", new BeanListHandler<Account>(Account.class));
@@ -34,6 +35,7 @@ public class AccountDaoImpl implements IAccountDao {
         }
     }
 
+    @Override
     public Account findAccountById(Integer accountId) {
         try {
             return runner.query("select * from account where id = ? ",
@@ -43,6 +45,7 @@ public class AccountDaoImpl implements IAccountDao {
         }
     }
 
+    @Override
     public void saveAccount(Account account) {
         try {
             runner.update("insert into account(name,money)values(?,?)",
@@ -52,6 +55,7 @@ public class AccountDaoImpl implements IAccountDao {
         }
     }
 
+    @Override
     public void updateAccount(Account account) {
         try {
             runner.update("update account set name=?,money=? where id=?",
@@ -61,6 +65,7 @@ public class AccountDaoImpl implements IAccountDao {
         }
     }
 
+    @Override
     public void deleteAccount(Integer accountId) {
         try {
             runner.update("delete from account where id=?", accountId);
