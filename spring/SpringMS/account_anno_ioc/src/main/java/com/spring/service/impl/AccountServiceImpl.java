@@ -14,7 +14,11 @@ import java.util.List;
  * @Description //TODO
  * @Date 2020/1/4 21:24
  **/
-@Service
+
+/**
+ * 如果不指定名字[@Service]就默认类名，首字母小写（accountServiceImpl）
+ */
+@Service("accountService")
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
