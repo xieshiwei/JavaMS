@@ -1,18 +1,14 @@
-package com.spring.model;
+package com.spring.domain;
 
 import java.io.Serializable;
 
 /**
- * @ClassName AccountDao
- *
- * 用户尸体类
- *
+ * @ClassName Account
  * @Author 萌琪琪爸爸
  * @Description //TODO
- * @Date 2019/12/28 19:25
+ * @Date 2020/1/6 12:29
  **/
 public class Account implements Serializable {
-
     private Integer id;
     private String name;
     private Float money;
@@ -41,12 +37,4 @@ public class Account implements Serializable {
         this.money = money;
     }
 
-    @Override
-    public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", money=" + money +
-                '}';
-    }
 }
