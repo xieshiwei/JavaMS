@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="03_transaction" />
         <module name="xmlioc" />
+        <module name="account_anno_ioc_withoutxml" />
+        <module name="03_transaction" />
         <module name="account_anno_ioc" />
         <module name="annio_ioc" />
-        <module name="account_anno_ioc_withoutxml" />
+        <module name="03_proxy" />
       </profile>
     </annotationProcessing>
   </component>
