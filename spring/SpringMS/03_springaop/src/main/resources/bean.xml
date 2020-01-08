@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 配置spring的ioc 把service配置进来 -->
+    <bean id="accountService" class="com.spring.service.impl.AccountServiceImpl"></bean>
+
+    <!-- spring 中基于xml的aop
+    1.把 【通知Bean】也交给spring来管理
+    2.使用aop:config标签表明开始AOP的配置
+    3.使用aop:aspect标签表明配置切面
+        id属性：是给切面提供一个唯一标识
+        ref属性：指定通知类bean的ID
+    4.在aop:aspect标签的内部使用对应标签来配置通知的类型
+        aop:before：标识前置通知
+            method属性：用于指定Logger类中那个方法是前置通知
+            pointcut属性：用于指定切入点表达式
+
+
+
+    -->
+
+    <!-- 配置 logger类 -->
+    <bean id="logger" class="com.spring.utils.Logger"></bean>
+
+    <!-- 配置AOP -->
+    <aop:config>
+        <aop:aspect id="logAdvice" ref="logger">
+            <aop:before method="printLog"></aop:before>
+
+        </aop:aspect>
+
+
+    </aop:config>
+
+</beans>

@@ -15,6 +15,7 @@
         <module>account_anno_ioc_withoutxml</module>
         <module>03_transaction</module>
         <module>03_proxy</module>
+        <module>03_springaop</module>
     </modules>
     <packaging>pom</packaging>
 

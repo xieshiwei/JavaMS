@@ -9,9 +9,10 @@
         <module name="xmlioc" />
         <module name="account_anno_ioc_withoutxml" />
         <module name="03_transaction" />
+        <module name="03_proxy" />
         <module name="account_anno_ioc" />
         <module name="annio_ioc" />
-        <module name="03_proxy" />
+        <module name="03_springaop" />
       </profile>
     </annotationProcessing>
   </component>
