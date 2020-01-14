@@ -16,6 +16,8 @@
         <module>03_transaction</module>
         <module>03_proxy</module>
         <module>03_springaop</module>
+        <module>03_adviceType</module>
+        <module>03_annotationAOP</module>
     </modules>
     <packaging>pom</packaging>
 

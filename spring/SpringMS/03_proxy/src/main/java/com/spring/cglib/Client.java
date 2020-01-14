@@ -55,6 +55,7 @@ public class Client {
              */
             @Override
             public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
+                System.out.println("进入intercept");
                 Object returnValue = null;
 
                 //1.获取方法执行参数
