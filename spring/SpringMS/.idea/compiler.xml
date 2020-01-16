@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -10,12 +9,12 @@
         <module name="03_adviceType" />
         <module name="account_anno_ioc_withoutxml" />
         <module name="03_transaction" />
+        <module name="03_annotationAOP" />
         <module name="03_springaop" />
         <module name="account_anno_ioc" />
         <module name="04_tx_xml" />
         <module name="annio_ioc" />
         <module name="xmlioc" />
-        <module name="ioc_aop_tx_xml" />
         <module name="03_proxy" />
       </profile>
     </annotationProcessing>
