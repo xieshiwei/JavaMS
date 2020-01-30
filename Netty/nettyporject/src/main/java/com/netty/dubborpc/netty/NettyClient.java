@@ -74,11 +74,9 @@ public class NettyClient {
                 });
 
         try {
-            ChannelFuture future = bootstrap.connect("127.0.0.1", 7000).sync();
+            bootstrap.connect("127.0.0.1", 7001).sync();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            group.shutdownGracefully();
         }
 
     }
