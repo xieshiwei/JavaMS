@@ -29,6 +29,11 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
         if (msg.toString().startsWith("HelloService#hello#")) {
             String result =
                     new HelloServiceImpl().hello(msg.toString().substring(msg.toString().lastIndexOf("#") + 1));
+            /**
+             * writeAndFlush会做两件事情
+             * 1 invokeWrite0(msg, promise)；将消息放入输出缓冲区中（ChannelOutboundBuffer）
+             * 2 invokeFlush0(); 将输出缓冲区中的数据通过socket发送到网络中
+             */
             ctx.writeAndFlush(result);
         }
     }

@@ -36,6 +36,34 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter implements 
     }
 
     /**
+     * 第二个被调用的方法
+     *
+     * @param para
+     */
+    public void setPara(String para) {
+        System.out.println("setPara 被调用");
+        this.para = para;
+    }
+
+    /**
+     * 被代理对象调用，发送数据给服务器，发送后wait，等待被唤醒
+     * 第三个被调用的（等待）
+     * 第五个被调用的（等待结束，继续执行）
+     *
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public synchronized Object call() throws Exception {
+        System.out.println("call1 被调用");
+        context.writeAndFlush(para);
+        //等待ChannelRead 获取到服务器结果后才会唤醒
+        wait();
+        System.out.println("call2 被调用");
+        return result;
+    }
+
+    /**
      * 收到服务器的数据后会被调用
      * 第四个被调用的
      *
@@ -57,32 +85,5 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter implements 
         ctx.close();
     }
 
-    /**
-     * 被代理对象调用，发送数据给服务器，发送后wait，等待被唤醒
-     * 第三个被调用的（等待）
-     * 第五个被调用的（等待结束，继续执行）
-     *
-     * @return
-     * @throws Exception
-     */
-    @Override
-    public synchronized Object call() throws Exception {
-        System.out.println("call1 被调用");
-        context.writeAndFlush(para);
-        //等待ChannelRead 获取到服务器结果后才会唤醒
-        wait();
-        System.out.println("call2 被调用");
-        return result;
-    }
 
-
-    /**
-     * 第二个被调用的方法
-     *
-     * @param para
-     */
-    public void setPara(String para) {
-        System.out.println("setPara 被调用");
-        this.para = para;
-    }
 }

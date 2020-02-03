@@ -47,6 +47,10 @@ public class NettyClient {
                     //providerName 协议头，args[0]就是客户端调用api 参数
                     client.setPara(providerName + args[0]);
 
+                    /**
+                     * 1 submit的参数必须要实现 Runnable 或者 Callable 接口
+                     * 2 通过 get() 获取返回的计算结果
+                     */
                     return executor.submit(client).get();
                 }
         );
